@@ -1,0 +1,48 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cqx0fbjoxb8cm"]
+
+[ext_resource type="Texture2D" uid="uid://cqp2p6ruhcxmq" path="res://gui/themes/pixel frame dark blue.png" id="1_lhdow"]
+[ext_resource type="StyleBox" uid="uid://7bbeo15hev0l" path="res://gui/themes/style_box_dark_blue_disabled.tres" id="1_xs265"]
+[ext_resource type="FontFile" uid="uid://dt80uxooutdrp" path="res://gui/EquipmentPro.ttf" id="2_pcnjo"]
+[ext_resource type="StyleBox" uid="uid://nyi85naqp788" path="res://gui/themes/style_box_dark_blue_normal.tres" id="2_u7jev"]
+[ext_resource type="StyleBox" uid="uid://durc6wro85mf0" path="res://gui/themes/style_box_dark_blue_pressed.tres" id="3_who4y"]
+[ext_resource type="Texture2D" uid="uid://6spml4utoiim" path="res://gui/themes/pixel frame darker blue.png" id="5_u7jev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs265"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_spofx"]
+texture = ExtResource("1_lhdow")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_who4y"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+texture = ExtResource("5_u7jev")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+default_font = ExtResource("2_pcnjo")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/styles/disabled = ExtResource("1_xs265")
+Button/styles/focus = SubResource("StyleBoxEmpty_xs265")
+Button/styles/hover = ExtResource("2_u7jev")
+Button/styles/normal = ExtResource("2_u7jev")
+Button/styles/pressed = ExtResource("3_who4y")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0.0941176, 0.0784314, 0.145098, 1)
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 0
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_spofx")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_who4y")

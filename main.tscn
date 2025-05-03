@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bxg7jvrpawyse"]
+[gd_scene load_steps=2 format=3 uid="uid://bxg7jvrpawyse"]
+
+[ext_resource type="PackedScene" uid="uid://c8gg00p8d2fnh" path="res://gui/tool/procedural_spritesheet_generator.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -8,3 +10,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
+
+[node name="ProceduralSpritesheetGenerator" parent="." instance=ExtResource("1_ig7tw")]
