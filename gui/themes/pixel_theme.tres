@@ -1,11 +1,17 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cqx0fbjoxb8cm"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://cqx0fbjoxb8cm"]
 
+[ext_resource type="Texture2D" uid="uid://dm1bkc5ym7sox" path="res://gui/themes/x button dark blue.png" id="1_bll0s"]
 [ext_resource type="Texture2D" uid="uid://cqp2p6ruhcxmq" path="res://gui/themes/pixel frame dark blue.png" id="1_lhdow"]
 [ext_resource type="StyleBox" uid="uid://7bbeo15hev0l" path="res://gui/themes/style_box_dark_blue_disabled.tres" id="1_xs265"]
+[ext_resource type="Texture2D" uid="uid://b8vtoiqdnlcr6" path="res://gui/themes/x button dark blue pressed.png" id="2_6682c"]
 [ext_resource type="FontFile" uid="uid://dt80uxooutdrp" path="res://gui/EquipmentPro.ttf" id="2_pcnjo"]
 [ext_resource type="StyleBox" uid="uid://nyi85naqp788" path="res://gui/themes/style_box_dark_blue_normal.tres" id="2_u7jev"]
 [ext_resource type="StyleBox" uid="uid://durc6wro85mf0" path="res://gui/themes/style_box_dark_blue_pressed.tres" id="3_who4y"]
 [ext_resource type="Texture2D" uid="uid://6spml4utoiim" path="res://gui/themes/pixel frame darker blue.png" id="5_u7jev"]
+[ext_resource type="StyleBox" uid="uid://dk7qx12320bh2" path="res://gui/themes/style_box_flat_blue_window.tres" id="8_6682c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6682c"]
+bg_color = Color(0.227451, 0.266667, 0.4, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs265"]
 
@@ -33,6 +39,9 @@ axis_stretch_vertical = 1
 
 [resource]
 default_font = ExtResource("2_pcnjo")
+AcceptDialog/icons/close = ExtResource("1_bll0s")
+AcceptDialog/icons/close_pressed = ExtResource("2_6682c")
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_6682c")
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/styles/disabled = ExtResource("1_xs265")
 Button/styles/focus = SubResource("StyleBoxEmpty_xs265")
@@ -46,3 +55,5 @@ Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_spofx")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_who4y")
+Window/styles/embedded_border = ExtResource("8_6682c")
+Window/styles/embedded_unfocused_border = ExtResource("8_6682c")

@@ -444,8 +444,9 @@ use_native_dialog = true
 
 [node name="AlertDialog" type="AcceptDialog" parent="UI"]
 unique_name_in_owner = true
-initial_position = 1
-size = Vector2i(140, 96)
+initial_position = 2
+size = Vector2i(130, 70)
+theme = ExtResource("4_tyxp6")
 dialog_text = "Missing input image!"
 dialog_autowrap = true
 

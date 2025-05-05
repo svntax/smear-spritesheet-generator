@@ -45,12 +45,14 @@ var original_sprite: Texture2D = null
 func _ready():
 	save_btn.pressed.connect(func():
 		if !original_sprite:
+			alert_dialog.size = Vector2(130, 70)
 			alert_dialog.show()
 			alert_dialog.dialog_text = "Missing input image!"
 			return
 		if !output_texture.texture:
+			alert_dialog.size = Vector2(130, 70)
 			alert_dialog.show()
-			alert_dialog.dialog_text = "Spritesheet is null."
+			alert_dialog.dialog_text = "Spritesheet output is empty."
 			return
 		save_spritesheet.visible = !save_spritesheet.visible
 	)
@@ -101,6 +103,7 @@ func _save_spritesheet(path: String) -> void:
 		save_success_dialog.dialog_text = "Saved to:\n%s" % path
 		save_success_dialog.show()
 	else:
+		alert_dialog.size = Vector2(130, 84)
 		alert_dialog.show()
 		alert_dialog.dialog_text = "Error %s - Failed to save spritesheet." % error
 
@@ -145,6 +148,7 @@ func on_sprite_uploaded(file_path: String):
 
 func generate_spritesheet():
 	if !original_sprite:
+		alert_dialog.size = Vector2(130, 70)
 		alert_dialog.show()
 		alert_dialog.dialog_text = "Missing input sprite!"
 		return
